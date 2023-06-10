@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/ponta', function () {
-    return response()->json([
-        'image_url' => asset('images/001.jpg')
-    ]);
+    return response()->file(Storage::path("/public/images/001.jpg"));
 });
