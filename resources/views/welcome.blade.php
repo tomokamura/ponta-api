@@ -16,7 +16,7 @@
         @if (app()->isLocal())
             <a href="{{ route('image.index') }}">画像一覧</a>
         @else
-            <a href="/images">画像一覧</a>
+            <a href="api/api/images">画像一覧</a>
         @endif
     </body>
 </html>
