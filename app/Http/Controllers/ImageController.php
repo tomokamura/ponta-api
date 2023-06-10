@@ -17,7 +17,7 @@ class ImageController extends Controller
         $request->image->move(public_path('images'), $imageName);
         $image = new \App\Models\Image;
         $image->name = $imageName;
-        $image->url = 'images/' . $imageName;
+        $image->url = 'https://raw.githubusercontent.com/tomokamura/ponta-api/main/public/images/' . $imageName;
 
         $image->save();
         return back()
