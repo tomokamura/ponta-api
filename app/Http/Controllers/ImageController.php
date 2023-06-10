@@ -34,6 +34,15 @@ class ImageController extends Controller
             return response()->json(['error' => 'Image not found'], 404);
         }
     }
+    public function getRandomImage()
+    {
+        $image = \App\Models\Image::inRandomOrder()->first();
+        if ($image) {
+            return response()->json([ 'id' => $image->id,'url' => asset($image->url)]);
+        } else {
+            return response()->json(['error' => 'Image not found'], 404);
+        }
+    }
     public function index()
     {
         $images = \App\Models\Image::all();

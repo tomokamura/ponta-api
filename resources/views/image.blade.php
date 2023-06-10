@@ -1,15 +1,16 @@
 <h1>画像一覧</h1>
 <h2>使い方</h2>
 <ul>
-  <li>"https://ponta-api-git-main-tomokamura.vercel.app/api/api/image/{ID}"にGETリクエストを送ると、ぽんたの画像のURLを取得できます。</li>
-  <li>リクエストの例：<a href="https://ponta-api-git-main-tomokamura.vercel.app/api/api/image/4">https://ponta-api-git-main-tomokamura.vercel.app/api/api/image/4</a></li>
-  <li>レスポンスの例: {"url":"example"}</li>
+  <li>下記URLにGETリクエストを送ると、ランダムなぽんたの画像のURLを取得できます。</li>
+  <li>リクエスト先：GET<a href="https://ponta-api-git-main-tomokamura.vercel.app/api/api/image/random">https://ponta-api-git-main-tomokamura.vercel.app/api/api/image/random</a></li>
+  <li>レスポンスの例: {"id":1,"url":"example.jpg"}</li>
+
 </ul>
-<ul>
+<ul style="display:flex;flex-wrap:wrap">
     @foreach ($images as $image)
         <li>
             <p>ID {{ $image->id }}</p>
-            <img src="{{ asset($image->url) }}" alt="{{ $image->name }}" width="200">
+            <img src="{{ asset($image->url) }}" alt="{{ $image->name }}" width="200" style="padding:10px">
         </li>
     @endforeach
 </ul>
