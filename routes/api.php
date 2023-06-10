@@ -25,6 +25,6 @@ Route::get('/ponta', function () {
 
 Route::get('upload', [ImageController::class, 'upload']);
 Route::post('upload', [ImageController::class, 'uploadPost'])->name('upload.post');
+Route::get('image/random', [ImageController::class, 'getRandomImage'])->name('get.random');
 Route::get('image/{id}', [ImageController::class, 'getImage'])->name('get.image');
 Route::get('/images', [ImageController::class, 'index'])->name('image.index');
-Route::get('/random', [ImageController::class, 'getRandomImage'])->name('get.random');
