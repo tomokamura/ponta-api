@@ -34,6 +34,11 @@ class ImageController extends Controller
             return response()->json(['error' => 'Image not found'], 404);
         }
     }
+    public function index()
+    {
+        $images = \App\Models\Image::all();
+        return view('image', compact('images'));
+    }
 }
 
 
