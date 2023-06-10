@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\ImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/ponta', function () {
     return response()->file(Storage::path("/public/images/001.jpg"));
 });
+
+Route::get('upload', [ImageController::class, 'upload']);
+Route::post('upload', [ImageController::class, 'uploadPost'])->name('upload.post');
+Route::get('image/{id}', [ImageController::class, 'getImage'])->name('get.image');
