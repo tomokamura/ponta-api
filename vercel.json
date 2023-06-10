@@ -18,7 +18,13 @@
     ],
     "env": {
         "APP_NAME": "Laravel Vercel",
-        "APP_DEBUG": "false",
+        "APP_DEBUG": "true",
+        "DB_CONNECTION": "pgsql",
+        "DB_HOST": "dpg-ci0nb5g2qv21rs56u91g-a.singapore-postgres.render.com",
+        "DB_PORT": "5432",
+        "DB_DATABASE"="pontadb"
+        "DB_USERNAME"="pontadb_user"
+        "DB_PASSWORD"="CAUtuMqgbg1VuAgeGcRALBxTLqgMoX5j"
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
