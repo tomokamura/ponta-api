@@ -13,6 +13,10 @@
     </head>
     <body class="antialiased">
         <h1>Welcome to Ponta's park!</h1>
-        <a href="{{ route('image.index') }}">画像一覧</a>
+        @if (app()->isLocal())
+            <a href="{{ route('image.index') }}">画像一覧</a>
+        @else
+            <a href="/images">画像一覧</a>
+        @endif
     </body>
 </html>
