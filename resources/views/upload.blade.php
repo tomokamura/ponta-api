@@ -8,7 +8,7 @@
 
 @if (count($errors) > 0)
 <div class="alert alert-danger">
-    <strong>Whoops!</strong> There were some problems with your input.
+    <strong>Whoops!</strong> 何か問題が起きました！
     <ul>
         @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
@@ -31,3 +31,5 @@
 
     </div>
 </form>
+<a href="/">戻る</a>
+

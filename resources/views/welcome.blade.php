@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Welcome to Ponta's park!</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -12,6 +12,7 @@
 
     </head>
     <body class="antialiased">
-        <a href="{{ route('image.index') }}">Image List</a>
+        <h1>Welcome to Ponta's park!</h1>
+        <a href="{{ route('image.index') }}">画像一覧</a>
     </body>
 </html>
